@@ -6,13 +6,6 @@ TicTacToe Ponzi implemented in Solidity
 
 [TicTacToePonzi](https://github.com/thierrygrimm/tictactoeponzi) is an open-source smart contract. It is an implementation of Tic Tac Toe in Solidity. Check the rules for further details.
 
-## Start 
-For visual purposes in Remix please inspect the site (Chrome) and add the following 
-CSS properties to the body of remix so that the board is properly displayed: 
-```
-white-space: pre-wrap;
-font-family: monospace;
-```
 ## Rules
 ### Basics for playing Tic Tac Toe
 
@@ -34,6 +27,22 @@ The contract maintains an internal balance of all deposited funds. After the gam
 If the last game has been less than t hours ago the game can always be **restarted**.
 But if the last game was more than t hours ago a lottery starts. With a **50% chance each player can win the entire contract's jackpot (funds)** accumulated throughout the games. Finally the contract will **self-destruct**. 
 
+## Setup
+
+To excute the contract externally simply:
+* **ABI**: [Download the ABI](TicTacToeABI.abi).
+* **Code**: [Download the Code](TicTacToeContract.sol).
+
+
+Load the code into Remix with the appropriate version ```solidity 0.5.13```. Run externally on the test network with the appropriate ABI and compiled Bytecode. Please do not load onto the main network. Any legal liability and resulting claims are denied and the user should be warned herewith.
+
+## Start 
+For visual purposes in Remix please inspect the site (Chrome) and add the following 
+CSS properties to the body of remix so that the board is properly displayed: 
+```
+white-space: pre-wrap;
+font-family: monospace;
+```
 
 ## Try yourself
 **Here are some basic functions**
@@ -64,14 +73,6 @@ You can always draw the board.
 
 ## Architecture
 ![Smart Contract Architecture](Images/conceptual.jpg)
-
-## Setup
-To excute the contract externally simply:
-* **ABI**: [Download the ABI](TicTacToeABI.abi).
-* **Code**: [Download the Code](TicTacToeContract.sol).
-
-
-Load the code into Remix with the appropriate version ```solidity 0.5.13```. Run externally on the test network with the appropriate ABI and compiled Bytecode. Please do not load onto the main network. Any legal liability and resulting claims are denied and the user should be warned herewith.
 
 
 ## Issues
