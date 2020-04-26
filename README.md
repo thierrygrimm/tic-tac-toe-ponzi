@@ -4,7 +4,7 @@ TicTacToe Ponzi implemented in Solidity
 
 [![Build Status](https://travis-ci.org/thierrygrimm/tictactoeponzi.svg?branch=master)](https://travis-ci.org/gophish/gophish) 
 
-[TicTacToePonzi](https://github.com/thierrygrimm/tictactoeponzi) is an open-source smart contract. It is an implementation of Tic Tac Toe in Solidity. Check the rules for further details.
+[TicTacToePonzi](https://github.com/thierrygrimm/tictactoeponzi) is an open-source smart contract. It is an implementation of Tic Tac Toe in Solidity with a twist of a ponzi-similar gambling scheme. Check the rules for further details.
 
 ## Rules
 ### Basics for playing Tic Tac Toe
