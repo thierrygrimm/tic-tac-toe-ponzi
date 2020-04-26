@@ -27,6 +27,10 @@ The contract maintains an internal balance of all deposited funds. After the gam
 If the last game has been less than t hours ago the game can always be **restarted**.
 But if the last game was more than t hours ago a lottery starts. With a **50% chance each player can win the entire contract's jackpot (funds)** accumulated throughout the games. Finally the contract will **self-destruct**. 
 
+
+## Architecture
+![Smart Contract Architecture](Images/conceptual.jpg)
+
 ## Setup
 
 To excute the contract externally simply:
@@ -70,9 +74,6 @@ currentPlayer()
 You can always draw the board.
 
 ```drawBoard()```
-
-## Architecture
-![Smart Contract Architecture](Images/conceptual.jpg)
 
 
 ## Issues
