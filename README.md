@@ -6,36 +6,36 @@ TicTacToe Ponzi implemented in Solidity
 
 [TicTacToePonzi](https://github.com/thierrygrimm/tictactoeponzi) is an open-source smart contract. It is an implementation of Tic Tac Toe in Solidity. Check the rules for further details.
 
-### Start 
+## Start 
 For visual purposes in Remix please inspect the site (Chrome) and add the following 
 CSS properties to the body of remix so that the board is properly displayed: 
 ```
 white-space: pre-wrap;
 font-family: monospace;
 ```
-### Rules
-**Basics for playing Tic Tac Toe**
+## Rules
+### Basics for playing Tic Tac Toe
 
 ![3x3 Matrix](Images/3x3.jpg)
 
 
 The game is played on a 3 by 3 matrix, where each player has a different shape (X|O). When taking a turn and making a move the players put their marks into an empty square until one player reaches 3 marks in a row/column/diagonal or all squares are filled. 
 
-**Ponzi aspect and contract specific**
+### Ponzi aspect and contract specific
 
 
 Games are played sequentially with waiting slots for players for the next game (-1 ETH). Occupying a slot with no confirmation or intention to play results in a temporary/permanent ban. 
 
 The contract maintains an internal balance of all deposited funds. After the game has started the players can make a move within a given time. If the time has passed, the player in turn automatically loses the game. In case of a tie all preceedings go to the contract. In case of a victory the winner gets 1.5 ETH and the loser ends up empty-handed. The margin goes to the contract. If the winnings are not redeemed within a specified time period they belong to the contract.
 
-**Big Cash**
+### Big Cash
 
 
-If the last game has been less than t hours ago the game can always be restarted.
-But if the last game was more than t hours ago a lottery starts. With a 50% chance each player can win the entire contract's jackpot (funds) accumulated throughout the games. Finally the contract will self-destruct. 
+If the last game has been less than t hours ago the game can always be **restarted**.
+But if the last game was more than t hours ago a lottery starts. With a **50% chance each player can win the entire contract's jackpot (funds)** accumulated throughout the games. Finally the contract will **self-destruct**. 
 
 
-### Try yourself
+## Try yourself
 **Here are some basic functions**
 
 The rules are dead-simple - just deposit some ether (at least 1 ETH) to the smart contract.
@@ -62,19 +62,23 @@ You can always draw the board.
 
 ```drawBoard()```
 
-### Architecture
+## Architecture
 ![Smart Contract Architecture](Images/conceptual.jpg)
 
-### Setup
-To excute the contract externally, simply [download the ABI](TicTacToeABI.abi)
-Load the code into Remix with the appropriate version solidity 0.5.13. Run externally on the test network with the appropriate ABI and compiled Bytecode. Please do not load onto the main network. Any legal liability and resulting claims are denied and the user should be warned herewith.
+## Setup
+To excute the contract externally simply:
+* **ABI**: [Download the ABI](TicTacToeABI.abi).
+* **Code**: [Download the Code](TicTacToeContract.sol).
 
 
-### Issues
+Load the code into Remix with the appropriate version ```solidity 0.5.13```. Run externally on the test network with the appropriate ABI and compiled Bytecode. Please do not load onto the main network. Any legal liability and resulting claims are denied and the user should be warned herewith.
 
-Find a bug? Want more features? Find something missing in the documentation? Let us know! Please don't hesitate to [file an issue](https://github.com/thierrygrimm/tictactoeponzi/issues/new) and we'll get right on it.
 
-### License
+## Issues
+
+Found a bug? Want more features? Find something missing in the documentation? Let us know! Please don't hesitate to [file an issue](https://github.com/thierrygrimm/tictactoeponzi/issues/new) and make a recommendation.
+
+## License
 ```
 tictactoeponzi - TicTacToe Smart Contract
 
